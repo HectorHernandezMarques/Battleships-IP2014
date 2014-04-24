@@ -1,0 +1,10 @@
+#######################
+# Eclipse project files
+#######################
+.classpath
+.project
+#############################
+# Eclipse project directories
+#############################
+bin/
+.settings/
