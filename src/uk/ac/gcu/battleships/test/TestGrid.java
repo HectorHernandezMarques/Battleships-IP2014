@@ -1,9 +1,13 @@
-import static org.junit.Assert.*;
+package uk.ac.gcu.battleships.test;
 
+import static org.junit.Assert.*;
 import org.junit.Test;
+import uk.ac.gcu.battleships.Grid;
 
 /** 
  * Class for testing the Grid.
+ * @author Yann Prono
+ * @author Anthony Cerf
  */
 public class TestGrid {
 	/**
@@ -51,7 +55,7 @@ public class TestGrid {
 	}
 
 	/** 
-	 * Test the returnCharacter method in normals conditions.
+	 * Test the returnCharacter() method in normals conditions.
 	 */
 	@Test
 	public void testReturnCharacter() {
