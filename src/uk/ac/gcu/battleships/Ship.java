@@ -1,25 +1,25 @@
 package uk.ac.gcu.battleships;
 
 public class Ship {
-	byte shipSize;					//Size of the ship 2, 3 or 4
-	byte shipPosition_x;			//Ship start position on board; x, y
-	byte shipPosition_y;
-	byte shipOrientation;			//0 = horizontal; >0 = vertical
-	byte[] shipHealth;				//Ship health. bow, rear, stern
+	int shipSize;					//Size of the ship 2, 3 or 4
+	int shipPosition_x;			//Ship start position on board; x, y
+	int shipPosition_y;
+	int shipOrientation;			//0 = horizontal; >0 = vertical
+	int[] shipHealth;				//Ship health. bow, rear, stern
 	
-	public boolean isHit(byte x_coord, byte y_coord){
+	public boolean isHit(int x_coord, int y_coord){
 		if(this.shipPosition_x == x_coord && this.shipPosition_y == y_coord)
 			return true;
 		else
 			return false;
 	}
 	
-	void setPosition(byte x, byte y) {
+	void setPosition(int x, int y) {
 		this.shipPosition_x = x;
 		this.shipPosition_y = y;
 	}
 	
-	void setShipSize(byte size) {
+	void setShipSize(int size) {
 		this.shipSize = size;
 	}
 	
@@ -29,7 +29,7 @@ public class Ship {
 			this.shipOrientation = 0;
 		} 
 		else if (orientation == 'v' || orientation == 'V'){
-			this.shipOrientation = (byte)(this.shipSize - 1);
+			this.shipOrientation = this.shipSize - 1;
 		} 
 		else
 			this.shipOrientation = 0;
